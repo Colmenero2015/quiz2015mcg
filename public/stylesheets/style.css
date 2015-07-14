@@ -1,9 +1,16 @@
 * {margin:0; padding: 0}
 body {font:16px Georgia serif;}
 #page-wrap {margin: 2% auto;color: white;}
-#page-wrap>.main{border: 1px solid #999;
+#page-wrap>.main{border: 1px solid gray;
 				padding: 1%; margin-bottom: 1px;
-				color: black;}
-section>div{padding: 20px;}
+				color: black;
+				border-radius: 10px;}
+section > div{padding: 20px;}
 header,nav,section,footer{background-repeat: #eee;text-align: center;}
 nav span{margin: 0px 10px 0px 0px;}
+.horizontal{
+	border-radius: 20px;
+	box-shadow: 0px 5px 5px 0px;}
+#foto{
+	border-radius: 50%;
+}

@@ -19,10 +19,11 @@ exports.show=function(req,res){
 // get /quizes/:id/answer
 exports.answer=function(req,res){
 	var resultado='Incorrecto';
-	if(req.query.respuesta===req.quiz.respuesta){
+	if(req.query.respuesta){
+	if(req.query.respuesta.toLowerCase()===req.quiz.respuesta.toLowerCase()){
 		resultado='Correcto';}
 		res.render('quizes/answer',{quiz:req.quiz,respuesta:resultado,errors:[]});
-};
+}else{res.redirect('/quizes');}};
 //get /quizes
 exports.index=function(req,res){
 	if(req.query.search!=""){

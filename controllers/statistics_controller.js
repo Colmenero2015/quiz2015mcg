@@ -1,4 +1,4 @@
-var models=require('../models/models.js');
+var models=require('../models/models.js'); //IMPORTA DEFINICION
 //get /statistics/show
 exports.show=function(req,res,next){
 	models.Comment.count().then(

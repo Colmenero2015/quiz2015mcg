@@ -30,8 +30,8 @@ var Quiz=sequelize.import(quiz_path);
 //Importar definicion de la tabla comment
 var comment_path=path.join(__dirname,'comment');
 var Comment=sequelize.import(comment_path);
-Comment.belongsTo(Quiz);
-Quiz.hasMany(Comment);
+Comment.belongsTo(Quiz,{onDelete:'cascade'});
+Quiz.hasMany(Comment,{onDelete:'cascade'});
 
 exports.Quiz=Quiz; //exportar definicion de la tabla Quiz
 exports.Comment=Comment;

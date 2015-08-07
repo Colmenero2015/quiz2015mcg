@@ -1,0 +1,15 @@
+
+<table class="estadisticas2">
+<tr><th colspan="2">ESTADISTICAS:</th></tr>
+<tr><td></td></tr>
+<% if(quizes>0){%>
+<tr><td>Numero de preguntas:</td><td><%= quizes %></td></tr>
+<tr><td>Numero de comentarios totales:</td><td><%= comments %></td></tr>
+<tr><td>Promedio coms X preg:</td><td><%= (comments/quizes).toFixed(4) %></td></tr>
+<tr><td>Preguntas con comentarios:</td><td><%= preCom %></tr></td>
+<tr><td>Preguntas sin comentarios:</td><td><%= quizes-preCom %></tr></td>
+<%}else{%><tr><td>No hay preguntas</td></tr><%}%>
+</table>
+
+
+ 

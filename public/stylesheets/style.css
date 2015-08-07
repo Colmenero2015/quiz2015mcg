@@ -18,3 +18,20 @@ nav span {margin:0px 10px 0px 0px;}
 #ErrorMsgs{color:#f61;font-size: smaler}
 button:hover{color:white; background-color:purple !important;}
 .right{float: right;}
+.estadisticas{
+	border:1px solid gray;
+	border-radius: 10px;
+	text-align: center;
+	padding: 5px;
+	background-color: white;
+}
+.estadisticas2{
+	border:1px solid gray;
+	border-radius: 10px;
+	text-align: left;
+	padding: 5px;
+	background-color: white;
+}
+table,th{
+	text-align: center;
+}

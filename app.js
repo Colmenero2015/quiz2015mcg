@@ -33,14 +33,14 @@ app.use(session());
 //autoload Control de tiempo de la sesion
 app.use(function(req,res,next){
 	if(req.session.user){ //si el usuario esta logeado
-		if(req.session.tiempo){ //si tiene tiempo de inicio asignado
-			if((new Date()).getTime()-req.session.tiempo>120000){ //si el tiempo excede 2 mins
+		if(req.session.user.tiempo){ //si tiene tiempo de inicio asignado
+			if(new Date().getTime()-req.session.user.tiempo>120000){ //si el tiempo excede 2 mins
 				delete req.session.user;  //borra la sesion de usuario
-				delete req.session.tiempo; //borra variable tiempo
-				res.redirect('/login'); //solicita nuevo login
-				}else{req.session.tiempo=(new Date().getTime())}; //reinicia tiempo asignado}
+				//delete req.session.tiempo; //borra variable tiempo
+				//res.redirect('/login'); //solicita nuevo login
+				}else{req.session.user.tiempo=new Date().getTime()}; //reinicia tiempo asignado}
 			}else{ //no tiene tiempo asignado
-				req.session.tiempo=(new Date()).getTime(); //asigna tiempo de inicio
+				req.session.user.tiempo=new Date().getTime(); //asigna tiempo de inicio
 		}
 	}
 	next();
